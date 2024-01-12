@@ -2,12 +2,13 @@ package com.it.blog.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +21,7 @@ public class Article {
     @Column(name = "content", nullable = false)
     private String content;
 
+    @Builder
     public Article(String title, String content) {;
         this.title = title;
         this.content = content;
