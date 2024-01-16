@@ -1,4 +1,6 @@
 spring:
+  jpa:
+    show-sql: true
   datasource:
       hikari:
         username: sa
@@ -7,3 +9,11 @@ spring:
   h2:
     console:
       enabled: true
+  devtools:
+    livereload:
+      enabled : true
+    remote :
+      restart:
+        enabled : false
+  thymeleaf:
+    cache: false
