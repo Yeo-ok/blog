@@ -20,3 +20,11 @@ CREATE TABLE PUBLIC.USERS (
                               UPDATED_AT DATETIME NOT NULL,
                               CONSTRAINT USERS_PK PRIMARY KEY (ID)
 );
+
+
+CREATE TABLE PUBLIC.REFRESHTOKEN (
+                                     ID BIGINT NOT NULL AUTO_INCREMENT,
+                                     USER_ID BIGINT NOT NULL,
+                                     REFRESH_TOKEN VARCHAR(255) NOT NULL,
+                                     CONSTRAINT REFRESHTOKEN_PK PRIMARY KEY (ID)
+);
